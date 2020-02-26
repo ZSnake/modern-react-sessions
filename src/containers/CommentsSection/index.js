@@ -9,19 +9,15 @@ const CommentsSection = ({ postId }) => {
     const [showComments, setShowComments] = useState(false);
     const [comments, setComments] = useState([]);
     useEffect(() => {
-        const fetchComments = async () => {
-            const response = await getComments(postId);
-            setComments(response);
-        }
-        if (showComments || comments.length === 0) fetchComments();
+        {/*...*/}
     }, [showComments, comments])
     return (
-        <CommentsVisibilityContext.Provider value={showComments}>
+        <div>
             <div className="post-actions-container">
                 <PostActions changeVisibility={setShowComments} />
             </div>
             <Comments comments={comments} />
-        </CommentsVisibilityContext.Provider>
+        </div>
     );
 };
 
