@@ -4,7 +4,7 @@ import { CommentsVisibilityContext } from '../../containers/CommentsSection';
 const Comment = ({ comment }) => (
     <div className="comment-container">
         <p className="comment-body">{comment.body}</p>
-        <div className="comment-author">By {comment.email}</div>
+        <div className="comment-author">{comment.email}</div>
     </div>
 );
 
