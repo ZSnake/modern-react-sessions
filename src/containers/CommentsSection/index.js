@@ -14,7 +14,7 @@ const CommentsSection = ({ postId }) => {
             setComments(response);
         }
         if (showComments || comments.length === 0) fetchComments();
-    }, [showComments, comments])
+    }, [showComments, comments, postId])
     return (
         <CommentsVisibilityContext.Provider value={showComments}>
             <div className="post-actions-container">
